@@ -89,8 +89,7 @@ npm run dev
 php artisan serve 
 ```
 
--   Truy cập: `http://localhost:8000`
--   
+-   Truy cập: `http://127.0.0.1:8000`
 📷 Hình ảnh minh họa
 
 **Danh sách Task**
