@@ -1,4 +1,4 @@
-**Todo List (Laravel)**
+## Todo List (Laravel)
 
 Ứng dụng quản lý công việc đơn giản, cho phép thêm, chỉnh sửa, đánh dấu hoàn thành và xóa các nhiệm vụ hàng ngày.
 
