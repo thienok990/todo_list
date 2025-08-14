@@ -90,7 +90,8 @@ php artisan serve
 ```
 
 -   Truy cập: `http://127.0.0.1:8000`
-📷 Hình ảnh minh họa
+
+**📷 Hình ảnh minh họa**
 
 **Danh sách Task**
 ![Task List](public/screenshots/index.jpeg)
