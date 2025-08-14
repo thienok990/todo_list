@@ -1,61 +1,132 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Todo List- Laravel 10
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Ứng dụng **Book Store** được xây dựng bằng **Laravel 10** cho phép quản lý các task. Đây là dự án minh họa kỹ năng **CRUD, MVC, – phù hợp để học tập hoặc triển khai nhỏ.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 💡 Tính năng
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   Quản lý **Task** (CRUD đầy đủ)
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Yêu cầu hệ thống
 
-## Learning Laravel
+-   PHP >= 8.1
+-   Composer
+-   Node.js >= 18
+-   MySQL / MariaDB
+-   Laravel >= 10.x
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## ⚙️ Hướng dẫn cài đặt
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Clone repository**
 
-## Laravel Sponsors
+```bash
+git clone https://github.com/thienok990/todo_list.git
+cd todo_list
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. **Cài đặt dependencies**
 
-### Premium Partners
+```bash
+composer install
+npm install
+```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+3. **Copy file cấu hình môi trường**
 
-## Contributing
+```bash
+cp .env.example .env
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-   Cấu hình database trong `.env`:
 
-## Code of Conduct
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=todolist
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. **Tạo key ứng dụng**
 
-## Security Vulnerabilities
+```bash
+php artisan key:generate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5. **Import dữ liệu từ file SQL**
 
-## License
+Thay vì chạy migration và seed, bạn import trực tiếp file SQL:
+```bash
+-   Mở công cụ quản lý MySQL bạn đang dùng (PHPMyAdmin, HeidiSQL, DBeaver…).
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   Tạo một database mới, ví dụ todolist.
+
+-   Chọn database vừa tạo → Import → chọn file todolist.sql trong thư mục database.
+
+-   Nhấn “Go” hoặc “Start” để import toàn bộ dữ liệu.
+```
+
+7. **Build assets bằng Vite**
+
+```bash
+npm run build
+```
+
+-   Hoặc dev mode:
+
+```bash
+npm run dev
+```
+
+8. **Chạy server**
+
+```bash
+php artisan serve 
+```
+
+-   Truy cập: `http://localhost:8000`
+
+---
+
+## 📂 Cấu trúc dự án nổi bật
+
+-   `app/Models` – chứa các model như Book, Author, Category
+-   `app/Http/Controllers` – controller xử lý logic
+-   `resources/views/admin` – Blade template quản lý dashboard
+-   `resources/js/app.js` – bundle JS (Bootstrap, jQuery, DataTables)
+-   `resources/css/app.css` – bundle CSS (Bootstrap, DataTables)
+-   `database/seeders` – seed dữ liệu mẫu
+
+---
+
+## 🌟 Kỹ năng áp dụng / Highlight
+
+-   **Laravel MVC & Eloquent ORM**
+-   **Blade components** và reusable views
+-   **CRUD + Validation + File Upload**
+-   **Pagination Laravel + DataTables**
+-   **JS/CSS bundling bằng Vite**
+-   **Responsive design & Bootstrap 5**
+
+---
+
+## 🚀 Demo
+
+-   Chạy local bằng `php artisan serve`
+
+**Danh sách Task**
+![Task List](public/screenshots/index.jpeg)
+
+**Các task Pending**
+![Pending Task](public/screenshots/pending.jpeg)
+
+**Các task Completed**
+![Completed Task](public/screenshots/completed.jpeg)
+
+**Chỉnh sửa Task**
+![Edit Task](public/screenshots/edit_task.jpeg)
