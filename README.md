@@ -90,34 +90,8 @@ php artisan serve
 ```
 
 -   Truy cập: `http://localhost:8000`
-
----
-
-## 📂 Cấu trúc dự án nổi bật
-
--   `app/Models` – chứa các model như Book, Author, Category
--   `app/Http/Controllers` – controller xử lý logic
--   `resources/views/admin` – Blade template quản lý dashboard
--   `resources/js/app.js` – bundle JS (Bootstrap, jQuery, DataTables)
--   `resources/css/app.css` – bundle CSS (Bootstrap, DataTables)
--   `database/seeders` – seed dữ liệu mẫu
-
----
-
-## 🌟 Kỹ năng áp dụng / Highlight
-
--   **Laravel MVC & Eloquent ORM**
--   **Blade components** và reusable views
--   **CRUD + Validation + File Upload**
--   **Pagination Laravel + DataTables**
--   **JS/CSS bundling bằng Vite**
--   **Responsive design & Bootstrap 5**
-
----
-
-## 🚀 Demo
-
--   Chạy local bằng `php artisan serve`
+-   
+📷 Hình ảnh minh họa
 
 **Danh sách Task**
 ![Task List](public/screenshots/index.jpeg)
