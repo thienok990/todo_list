@@ -1,23 +1,22 @@
-# Todo List- Laravel 10
+Todo List (Laravel)
 
-Ứng dụng **Book Store** được xây dựng bằng **Laravel 10** cho phép quản lý các task. Đây là dự án minh họa kỹ năng **CRUD, MVC, – phù hợp để học tập hoặc triển khai nhỏ.
+Ứng dụng quản lý công việc đơn giản, cho phép thêm, chỉnh sửa, đánh dấu hoàn thành và xóa các nhiệm vụ hàng ngày.
 
----
+🚀 Tính năng
 
-## 💡 Tính năng
+Thêm công việc mới.
 
--   Quản lý **Task** (CRUD đầy đủ)
----
+Chỉnh sửa công việc hiện tại.
 
-## 🛠️ Yêu cầu hệ thống
+Đánh dấu công việc đã hoàn thành.
 
--   PHP >= 8.1
--   Composer
--   Node.js >= 18
--   MySQL / MariaDB
--   Laravel >= 10.x
+Xóa công việc không cần thiết.
 
----
+🛠 Công nghệ sử dụng
+
+Backend: Laravel 10.x, PHP 8.x
+
+Frontend: Blade, Bootstrap 5, JavaScript
 
 ## ⚙️ Hướng dẫn cài đặt
 
